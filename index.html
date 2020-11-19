@@ -15,7 +15,14 @@ const secretCode = 'wesbos'; // what we're looking for
     window.addEventListener('keyup', (e) => { // event listener for key up event
         console.log(e.key);
         pressed.push(e.key); // creates and array of keys pressed
-        console.log(pressed);
+        pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length); // counts back from end and uses 'wesbos' length ie the secretCode variable. 
+        // Will only allow 6 characters in array as wesbos is 6
+        
+        if (pressed.join('').includes(secretCode)) { // join the characters together to make a string
+        // if string includes the secretCode 'wesbos' then it's true 
+            console.log('DING DING!'); // will run DING DING! when wesbos is typed
+        }
+        
     });
 </script>
 </body>
