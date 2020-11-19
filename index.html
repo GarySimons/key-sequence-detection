@@ -7,6 +7,16 @@
 </head>
 <body>
 <script>
+
+const pressed = []; // create and array
+const secretCode = 'wesbos'; // what we're looking for
+
+
+    window.addEventListener('keyup', (e) => { // event listener for key up event
+        console.log(e.key);
+        pressed.push(e.key); // creates and array of keys pressed
+        console.log(pressed);
+    });
 </script>
 </body>
 </html>
